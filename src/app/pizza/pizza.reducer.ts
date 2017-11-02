@@ -12,6 +12,7 @@ export interface Pizza {
 export const pizzaAdapter = createEntityAdapter<Pizza>();
 export interface State extends EntityState<Pizza> { }
 
+
 // Default data / initial state
 const defaultPizza = {
     ids: ['123'],
@@ -25,26 +26,32 @@ const defaultPizza = {
 
 export const initialState: State = pizzaAdapter.getInitialState(defaultPizza);
 
+// Reducer
 export function pizzaReducer(
     state: State = initialState,
     action: actions.PizzaActions) {
-        switch (action.type) {
 
-            case actions.CREATE:
-                return pizzaAdapter.addOne(action.pizza, state);
+    switch (action.type) {
 
-            case actions.UPDATE:
-                return pizzaAdapter.updateOne({
-                    id: action.id,
-                    changes: action.changes,
-                }, state);
+        case actions.CREATE:
+            return pizzaAdapter.addOne(action.pizza, state);
 
-            case actions.DELETE:
-                return pizzaAdapter.removeOne(action.id, state);
+        case actions.UPDATE:
+            return pizzaAdapter.updateOne({
+                id: action.id,
+                changes: action.changes,
+            }, state);
+
+        case actions.DELETE:
+            return pizzaAdapter.removeOne(action.id, state)
+
+        default:
+            return state;
         }
-    }
 
-    // Create the default selectors
+}
+
+// Create the default selectors
 export const getPizzaState = createFeatureSelector<State>('pizza');
 
 export const {
@@ -52,4 +59,4 @@ export const {
     selectEntities,
     selectAll,
     selectTotal,
-} = pizzaAdapter.getSelectors(getPizzaState);
+  } = pizzaAdapter.getSelectors(getPizzaState);
