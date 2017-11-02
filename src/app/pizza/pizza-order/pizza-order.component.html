@@ -1,27 +1,31 @@
+<div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="24px" class="pizza-order-container">
 <div *ngFor="let pizza of pizzas | async">
 
-  <img src="/assets/pizza.jpg" width="200px">
+  <mat-card fxLayoutAlign="center" fxLayout="column">
+        <img src="/assets/pizza.jpg" width="200px">    
+        <h3 class="mat-h3">Pizza ID: {{ pizza.id }} </h3>
+        <p class="mat-body">Size: {{ pizza.size }}</p>  
 
-  <h3 class="mat-h3">Pizza ID: {{ pizza.id }} </h3>
-  <p class="mat-body">Size: {{ pizza.size }}</p>
 
-  <button mat-button color="accent"
-    *ngIf="pizza.size==='small'" 
-    (click)="updatePizza(pizza.id, 'large')">
-    UPGRADE TO LARGE
-  </button>
+      <button mat-button color="accent"
+      *ngIf="pizza.size==='small'" 
+      (click)="updatePizza(pizza.id, 'large')">
+      UPGRADE TO LARGE
+    </button>
+  
+    <button mat-button color="accent"
+      *ngIf="pizza.size==='large'" 
+      (click)="updatePizza(pizza.id, 'small')">
+      DOWNGRADE TO SMALL
+    </button> 
+  
+    <button mat-button color="warn"
+      (click)="deletePizza(pizza.id)">DELETE</button>
+     <hr>
+  </mat-card>
 
-  <button mat-button color="accent"
-    *ngIf="pizza.size==='large'" 
-    (click)="updatePizza(pizza.id, 'small')">
-    DOWNGRADE TO SMALL
-  </button> 
-
-  <button mat-button color="warn"
-    class="button is-danger"
-    (click)="deletePizza(pizza.id)">DELETE</button>
-   <hr>
 </div>
 
 <button mat-button color="primary"
   (click)="createPizza()">NEW PIZZA</button>
+</div>

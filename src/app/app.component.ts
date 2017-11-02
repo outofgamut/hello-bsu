@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { UUID } from 'angular2-uuid';
 import { Store } from '@ngrx/store';
-import * as TodoActions from './actions/todo.actions';
 
 @Component({
   selector: 'app-root',

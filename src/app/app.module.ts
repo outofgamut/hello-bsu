@@ -10,6 +10,7 @@ import { StoreModule } from '@ngrx/store';
 
 import { PizzaModule } from './pizza/pizza.module';
 import { reducers } from './reducers';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +20,8 @@ import { reducers } from './reducers';
     StoreModule.forRoot(reducers),
     PizzaModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    FlexLayoutModule
   ],
   bootstrap: [AppComponent]
 })
