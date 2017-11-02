@@ -1,27 +1,27 @@
-<h1>Welcome to BSU Pizza!</h1>
-<hr>
-
 <div *ngFor="let pizza of pizzas | async">
 
   <img src="/assets/pizza.jpg" width="200px">
 
-  <h3>Pizza ID: {{ pizza.id }} </h3>
-  <p>Size: {{ pizza.size }}</p>
+  <h3 class="mat-h3">Pizza ID: {{ pizza.id }} </h3>
+  <p class="mat-body">Size: {{ pizza.size }}</p>
 
-  
-  <button *ngIf="pizza.size==='small'" class="button is-warning" 
-          (click)="updatePizza(pizza.id, 'large')">
-    Upgrade to Large
+  <button mat-button color="accent"
+    *ngIf="pizza.size==='small'" 
+    (click)="updatePizza(pizza.id, 'large')">
+    UPGRADE TO LARGE
   </button>
 
-  <button *ngIf="pizza.size==='large'" class="button is-success" 
-          (click)="updatePizza(pizza.id, 'small')">
-    Downgrade to Small
+  <button mat-button color="accent"
+    *ngIf="pizza.size==='large'" 
+    (click)="updatePizza(pizza.id, 'small')">
+    DOWNGRADE TO SMALL
   </button> 
 
-  <button class="button is-danger" (click)="deletePizza(pizza.id)">DELETE</button>
+  <button mat-button color="warn"
+    class="button is-danger"
+    (click)="deletePizza(pizza.id)">DELETE</button>
    <hr>
 </div>
 
-
-<button class="button is-primary" (click)="createPizza()">CREATE new Pizza</button>
+<button mat-button color="primary"
+  (click)="createPizza()">NEW PIZZA</button>
