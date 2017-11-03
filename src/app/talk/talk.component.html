@@ -87,19 +87,24 @@
             <mat-list-item>• and more...</mat-list-item>
         </mat-list>
     </mat-step>
-    <mat-step label="RxJS" editable="false">
-      <p>The Redux JavaScript library was made famous by React and Elm, but its design patterns can also be applied in Angular. 
-          The general idea is that all application data is kept in a single JavaScript object on the client, 
-          giving you a predictable tree of state changes.</p>
+    <mat-step label="RxJS" editable="false" fxLayout="column" fxLayoutAlign="center">
         <div>
-                    <img src="/assets/redux.png" width="100%">
+            <p>The Redux JavaScript library was made famous by React and Elm, but its design patterns can also be applied in Angular. 
+                    The general idea is that all application data is kept in a single JavaScript object on the client, 
+                    giving you a predictable tree of state changes.</p>
         </div>
-        <br/>
-        <p>1. All application data is one single object known as a <strong>store</strong>, representing the application’s state. It's essentially a mini client-side database that holds all data being consumed by an app at any given point in time.</p>
-        <p>2. A state object cannot be changed - it is immutable.</p>
-        <p>3. When data changes, the existing state is duplicated, then a new object is created with the updates. In Angular this data is treated as an RxJS Observable, allowing us to subscribe to it from anywhere in the app.</p>
-        <p>4. State can only be changed via an <strong>action</strong>, which is also an object. It includes a type (the action name) and an optional payload (the action data), for example {{'{'}}type: 'DELETE_ITEM', payload: 123 {{'}'}}.</p>
-        <p>5. When an event is emitted, for example a button click, the action is sent to a <strong>reducer</strong> function to converts the old state into the new state.</p>
+        <div fxLayout fxLayoutAlign="center">
+            <div fxFlex="100" fxFlex.gt-sm="50">
+                    <img width="100%" height="auto" src="/assets/redux.png">                                    
+            </div>
+        </div>
+        <div>
+                <p>1. All application data is one single object known as a <strong>store</strong>, representing the application’s state. It's essentially a mini client-side database that holds all data being consumed by an app at any given point in time.</p>
+                <p>2. A state object cannot be changed - it is immutable.</p>
+                <p>3. When data changes, the existing state is duplicated, then a new object is created with the updates. In Angular this data is treated as an RxJS Observable, allowing us to subscribe to it from anywhere in the app.</p>
+                <p>4. State can only be changed via an <strong>action</strong>, which is also an object. It includes a type (the action name) and an optional payload (the action data), for example {{'{'}}type: 'DELETE_ITEM', payload: 123 {{'}'}}.</p>
+                <p>5. When an event is emitted, for example a button click, the action is sent to a <strong>reducer</strong> function to converts the old state into the new state.</p>
+        </div>
     </mat-step>
     <mat-step label="Let's build" editable="false">
             
