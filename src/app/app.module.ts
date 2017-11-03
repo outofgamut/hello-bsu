@@ -15,9 +15,10 @@ import { reducers } from './reducers';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TalkComponent } from './talk/talk.component';
 import { HomeComponent } from './home/home.component';
+import { AttendeesComponent } from './attendees/attendees.component';
 
 @NgModule({
-  declarations: [AppComponent, TalkComponent, HomeComponent],
+  declarations: [AppComponent, TalkComponent, HomeComponent, AttendeesComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

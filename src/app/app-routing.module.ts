@@ -1,3 +1,4 @@
+import { AttendeesComponent } from './attendees/attendees.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PizzaOrderComponent } from './pizza/pizza-order/pizza-order.component';
 import { TalkComponent } from './talk/talk.component';
@@ -9,6 +10,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'talk', component: TalkComponent },
   { path: 'pizza', component: PizzaOrderComponent },
+  { path: 'attendees', component: AttendeesComponent },
   { path: '**', component: HomeComponent } // always last
 ];
 
