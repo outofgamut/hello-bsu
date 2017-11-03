@@ -1,5 +1,15 @@
 # Hello Boise!
 
+## Follow Along
+If you would like to follow along in the interactive section of the class, here is what you'll need to do to get started...
+
+- [Install Git](https://git-scm.com/) (once it's installed successfully, you should be able to open terminal/cmd and run `git -v`)
+- [Install Node](https://nodejs.org/en/) (once it's installed successfully, you should be able to open terminal/cmd and run `npm -v`)
+- Run `npm install -g @angular/cli` to install the Angular CLI on your machine
+- Create a GitHub account
+- Fork this repository
+- Open it in your editor of choice (I prefer [Visual Studio Code](https://code.visualstudio.com/))
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
 
 ## Development server
