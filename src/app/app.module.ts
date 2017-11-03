@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { MatToolbarModule, MatIconModule, MatStepperModule } from '@angular/material';
+import { MatToolbarModule, MatIconModule, MatStepperModule, MatListModule, MatExpansionModule } from '@angular/material';
 
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -30,6 +30,8 @@ import { HomeComponent } from './home/home.component';
     MatToolbarModule,
     MatIconModule,
     MatStepperModule,
+    MatListModule,
+    MatExpansionModule,
     FlexLayoutModule
   ],
   bootstrap: [AppComponent]

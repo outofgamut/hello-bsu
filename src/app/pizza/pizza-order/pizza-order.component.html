@@ -1,8 +1,11 @@
 <div fxLayout="column" fxLayoutAlign="center" fxLayoutGap="24px" class="pizza-order-container">
-<div *ngFor="let pizza of pizzas | async">
+    <button mat-raised-button color="primary"
+    (click)="createPizza()">NEW PIZZA</button>
 
-  <mat-card fxLayoutAlign="center" fxLayout="row" fxLayoutGap="24px">
-        <img src="/assets/pizza.jpg" width="auto">    
+  <div *ngFor="let pizza of pizzas | async">
+
+  <mat-card fxLayoutAlign="center center" fxLayout.gt-xs="row" fxLayout="column" fxLayoutGap="24px">
+        <img src="/assets/pizza.jpg" width="200px" height="200px">    
         <div class="pizza-details" fxLayout="column" fxLayoutAlign="center center">
           <h1 class="mat-h1">Pizza ID: {{ pizza.id }} </h1>
           <span class="mat-h3">size: {{ pizza.size }}</span>  
@@ -29,6 +32,4 @@
   </mat-card>
 </div>
 
-<button mat-raised-button color="primary"
-  (click)="createPizza()">NEW PIZZA</button>
 </div>
