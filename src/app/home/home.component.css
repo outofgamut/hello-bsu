@@ -1,0 +1,17 @@
+.home-container {
+    background-color: rgb(255, 55, 0);
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+.home-header {
+    margin: 24px;
+    text-align: center;
+    max-width: 500px;
+}
+
+.home-title {
+    margin: 1.5rem;
+    font-size: 2.4rem;
+}

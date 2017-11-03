@@ -1,2 +1,9 @@
-<mat-toolbar color="primary">BSU Pizza Time!</mat-toolbar>
-<app-pizza-order></app-pizza-order>
+<mat-toolbar color="primary">
+    ngBSU
+    <a [routerLink]="['/home']" class="nav-link"><mat-icon class="nav-icon">home</mat-icon></a>        
+    <a [routerLink]="['/talk']" class="nav-link"><mat-icon class="nav-icon">forum</mat-icon></a>        
+    <a [routerLink]="['/pizza']" class="nav-link"><mat-icon class="nav-icon">build</mat-icon></a>            
+</mat-toolbar>
+<!-- <app-pizza-order></app-pizza-order> -->
+<router-outlet></router-outlet>
+<!-- <app-talk></app-talk> -->
