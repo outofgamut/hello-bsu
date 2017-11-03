@@ -16,64 +16,97 @@
             <mat-expansion-panel-header>
                 <mat-panel-title>Modules</mat-panel-title>
             </mat-expansion-panel-header>
-            Modules detail
+            <p>Modules are Angular's way of organizing and cleanly decoupling certain workflows or application domains. 
+                Angular apps can be viewed as a module tree, with a top-level module. Most will typically have a core module and shared module as well. 
+                Larger apps will typically have multiple feature modules as well. For more information, check out the 
+                <a href="https://angular.io/guide/ngmodule" target="_blank">ngModules Angular Documentation</a>                    
+            </p>
         </mat-expansion-panel>
         <mat-expansion-panel>
             <mat-expansion-panel-header>
                 <mat-panel-title>Components</mat-panel-title>
             </mat-expansion-panel-header>
-            Components detail
+            <p>A component controls a patch of screen called a view. You define a component's application logic (what it does to support the view) inside a class. 
+                When you generate a component through the CLI, it creates the following files:</p>  
+                <mat-list>
+                        <mat-list-item>• Component</mat-list-item>
+                        <mat-list-item>• Template</mat-list-item>
+                        <mat-list-item>• Spec</mat-list-item>
+                        <mat-list-item>• Stylesheet</mat-list-item>                        
+                    </mat-list>
         </mat-expansion-panel>
         <mat-expansion-panel>
             <mat-expansion-panel-header>
                 <mat-panel-title>Templates</mat-panel-title>
             </mat-expansion-panel-header>
-            Templates detail
+            <p>You define what a component displays with its corresponding template. 
+                It's nothing more than an HTML file spiced up with custom directives.</p>
         </mat-expansion-panel>
         <mat-expansion-panel>
             <mat-expansion-panel-header>
-                <mat-panel-title>Metadata</mat-panel-title>
+                <mat-panel-title>Directives</mat-panel-title>
             </mat-expansion-panel-header>
-            Metadata detail
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>Data binding</mat-panel-title>
-            </mat-expansion-panel-header>
-            Data binding detail
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>Modules</mat-panel-title>
-            </mat-expansion-panel-header>
-            Directives detail
+            <p>Angular templates are dynamic. When Angular renders them, directives tell it how to transfer the DOM. Components are technically directives. Two other kinds of directives exist: <strong>structural</strong> and <strong>directives</strong>.
+                They tend to appear within an element tag as attributes do, sometimes by name but more often as the target of an assignment or a binding. <strong>*ngFor is a structural directive.</strong>
+            </p>
+            <p>Structural directives alter layout by adding, removing, and replacing elements in DOM.</p>
+            <p>Attribute directives alter the appearance or behavior of an existing element. In templates they look like regular HTML attributes, hence the name. <strong>ngModel is an attribute directive.</strong></p>            
         </mat-expansion-panel>
         <mat-expansion-panel>
             <mat-expansion-panel-header>
                 <mat-panel-title>Services</mat-panel-title>
             </mat-expansion-panel-header>
-            Services detail
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-            <mat-expansion-panel-header>
-                <mat-panel-title>Dependency Injection</mat-panel-title>
-            </mat-expansion-panel-header>
-            DI detail
+            <p>Service is a broad category encompassing any value, function, or feature that your application needs.
+                    Almost anything can be a service. A service is typically a class with a narrow, well-defined purpose.
+                     It should do something specific and do it well. Components consume services. Services are singletons. Some examples include:                    
+                    <mat-list>
+                        <mat-list-item>• logging service</mat-list-item>
+                        <mat-list-item>• back-end service</mat-list-item>
+                        <mat-list-item>• currency conversion calculator</mat-list-item>
+                        <mat-list-item>• application configuration</mat-list-item>                        
+                    </mat-list>
         </mat-expansion-panel>
     </mat-step>
     <mat-step label="CLI" editable="false">
-        Talk about the CLI...
+        The Angular CLI makes it really easy to use the command line to quickly generate code following Angular best practices. 
+        You can use it to quickly accomplish the following types of activities:
+        <mat-list>
+                <mat-list-item>• create an new application that already works</mat-list-item>
+                <mat-list-item>• generate components, modules, services, and pipes</mat-list-item>
+                <mat-list-item>• serve your app locally while developing</mat-list-item>
+                <mat-list-item>• build an optimized, production version of your app</mat-list-item>   
+                <mat-list-item>• run tests, lint your code, and auto-format</mat-list-item>
+            </mat-list>
     </mat-step>
     <mat-step label="Angular Material" editable="false">
-        Talk about Angular Material
+        <p><a href="https://material.angular.io" target="_blank">Angular Material</a> is a library of out-of-the-box material design UI components built to integrate seamlessly with Angular.</p>
+        <mat-list>       
+            <mat-list-item>• Form controls (inputs, selects, autocomplete, datepickers...)</mat-list-item>
+            <mat-list-item>• Layout components (cards, grids, tabs...)</mat-list-item>
+            <mat-list-item>• Buttons & indicators (buttons, tooltips, chips, spinners...)</mat-list-item>
+            <mat-list-item>• and more...</mat-list-item>
+        </mat-list>
     </mat-step>
-    <mat-step label="Angular 5" editable="false">
-      If you're interested in learning more about Angular or Allata, here are some cool references.
+    <mat-step label="RxJS" editable="false">
+      <p>The Redux JavaScript library was made famous by React and Elm, but its design patterns can also be applied in Angular. 
+          The general idea is that all application data is kept in a single JavaScript object on the client, 
+          giving you a predictable tree of state changes.</p>
+        <div>
+                    <img src="/assets/redux.png" width="100%">
+        </div>
+        <br/>
+        <p>1. All application data is one single object known as a <strong>store</strong>, representing the application’s state. It's essentially a mini client-side database that holds all data being consumed by an app at any given point in time.</p>
+        <p>2. A state object cannot be changed - it is immutable.</p>
+        <p>3. When data changes, the existing state is duplicated, then a new object is created with the updates. In Angular this data is treated as an RxJS Observable, allowing us to subscribe to it from anywhere in the app.</p>
+        <p>4. State can only be changed via an <strong>action</strong>, which is also an object. It includes a type (the action name) and an optional payload (the action data), for example {{'{'}}type: 'DELETE_ITEM', payload: 123 {{'}'}}.</p>
+        <p>5. When an event is emitted, for example a button click, the action is sent to a <strong>reducer</strong> function to converts the old state into the new state.</p>
     </mat-step>
     <mat-step label="Let's build" editable="false">
-        Build instructions for a basic Angular App
+            
+            <p>Let's see if we can get our machines set up for Angular development. While y'all are doing that, I'll set up an <strong>attendees</strong> page for y'all to add to.</p>        
+            <a href="https://github.com/outofgamut/hello-bsu" target="_blank">https://github.com/outofgamut/hello-bsu</a>
     </mat-step>
     <mat-step label="Thank you!" editable="false">
-        Thanks!
+        Thanks y'all! ^__^
     </mat-step>
 </mat-vertical-stepper>

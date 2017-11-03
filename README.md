@@ -10,6 +10,8 @@ If you would like to follow along in the interactive section of the class, here 
 - Fork this repository
 - Open it in your editor of choice (I prefer [Visual Studio Code](https://code.visualstudio.com/))
 
+---
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.
 
 ## Development server
